@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .card2 {
+      background-image: url(she.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 350px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .card2 h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      margin: 0;
+      color: #4a2b1c;
+    }
+
+    .card2 h2 {
+      font-family: 'Lobster', cursive;
+      font-size: 36px;
+      margin: 0;
+      color: #4a2b1c;
+      font-weight: 400;
+    }
+
+    .click-button {
+      display: none;
+      background: #3a2b26;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 30px;
+      /* jarak antara teks dan tombol */
+    }
+
+    .click-button:hover {
+      color: #f9baba;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .show-button {
+      display: inline-block;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .content2 {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.575);
+      display: none;
+    }
+
+    .content2 .wa {
+      text-align: center;
+      display: none;
+    }
+
+    .content2 .wa button {
+      background-image: linear-gradient(to top left, #ff009d, #ff004c);
+      padding: 7px 20px;
+      margin: 50px auto;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      border: 2px solid white;
+      animation: animasi2 1s ease infinite;
+    }
+  </style>
+  <title>typing</title>
+</head>
+
+<body class="typing">
+  <audio autoplay type="audio" loop="" class="audio"></audio>
+  <div class="bg"></div>
+  <div class="container3">
+    <span class="animated-text"></span>
+    <button class="click-button" onclick="tampil()">Baca Pesan</button>
+  </div>
+
+  <div class="content2">
+    <div class="paper animate__animated animate__bounceIn" id="content2">
+      <div class="paper-content">
+        <textarea class="pesan" disabled></textarea>
+      </div>
+    </div>
+    <div class="wa animate__animated animate__fadeInUp">
+      <button onclick="balasWa()">Balas Pesan</button>
+    </div>
+  </div>
+  </div>
+
+
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
